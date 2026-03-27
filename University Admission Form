@@ -1,1 +1,130 @@
 # admission-form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Admission Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+          
+             background-image: url('campus.AVIF');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .radio-group, .checkbox-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .inline {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2>University Admission Form</h2>
+
+    <form>
+
+        
+        <label>First Name</label>
+        <input type="text" name="firstName" required>
+
+        <label>Last Name</label>
+        <input type="text" name="lastName" required>
+
+        
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" required>
+
+        
+        <label>Marks in Last Degree (0 - 100)</label>
+        <input type="number" name="marks" min="0" max="100" required>
+
+        
+        <label>Upload Passport Photo</label>
+        <input type="file" accept="image/*" required>
+
+        
+        <label>Preferred Class Timing</label>
+        <div class="radio-group">
+            <input type="radio" name="timing" value="morning" class="inline"> Morning
+            <input type="radio" name="timing" value="evening" class="inline"> Evening
+        </div>
+
+        
+        <label>Select Courses</label>
+        <div class="checkbox-group">
+            <input type="checkbox" class="inline"> Computer Science <br>
+            <input type="checkbox" class="inline"> Business Administration <br>
+            <input type="checkbox" class="inline"> Electrical Engineering <br>
+            <input type="checkbox" class="inline"> Graphic Design <br>
+            <input type="checkbox" class="inline"> Psychology
+        </div>
+
+        <br>
+
+        <button type="submit">Apply Now</button>
+
+    </form>
+</div>
+
+</body>
+</html>
